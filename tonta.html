@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Para Cruxxi 💜</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1a1a1a, #2c003e);
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    h1 {
+      margin-top: 50px;
+      font-size: 2.5em;
+      color: #ff66cc;
+      text-shadow: 2px 2px #000;
+    }
+
+    .gatito {
+      width: 120px;
+      margin: 20px auto;
+      animation: flotar 3s ease-in-out infinite;
+    }
+
+    @keyframes flotar {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .botones {
+      margin-top: 40px;
+    }
+
+    button {
+      font-size: 1.2em;
+      padding: 15px 30px;
+      margin: 20px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+    }
+
+    .si {
+      background-color: #ff66cc;
+      color: white;
+    }
+
+    .no {
+      background-color: #663399;
+      color: white;
+    }
+
+    .flores, .pato {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      display: none;
+    }
+
+    .taco3 img, .pato img {
+      width: 200px;
+      animation: aparecer 1s ease-in-out;
+    }
+
+    @keyframes aparecer {
+      from { transform: scale(0); opacity: 0; }
+      to { transform: scale(1); opacity: 1); }
+    }
+
+    .taco,.taco2 {
+      font-size: 1.2em;
+      color: #ccc;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>💖 Cruxxi 💖</h1>
+  <div class="taco">(Iran Maria Cruz Leyva)</div>
+   <div class="taco2">(amor de mi vida)</div>
+
+  <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExcHNjNmc5NXFpOTY0bGNmejE5MGN3dHhrOXA5cWU1aHoyMDk5dW5vayZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tGzgnKUrWiGUClF36h/giphy.gif" class="taco3" alt="gatito lindo">
+
+  <h1>¿Puedo ser tu novio?</h1>
+
+  <div class="botones">
+    <button class="si" onclick="responder('si')">Sí 💕</button>
+    <button class="no" onclick="responder('no')">No 😢</button>
+  </div>
+
+
+  <div class="flores" id="flores">
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2g4NnZ0b241eDJzdDkybWt1M25qdGZybXd3OGNqcXNlYXk4N3gzZSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Z21HJj2kz9uBG/giphy.gif" alt="flores felices">
+  </div>
+
+
+  <div class="pato" id="pato">
+    <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExejVmenA1cjZ5M3R1bWtiODI2Ymt5MWwwemhueGNwN3N3MWpobTRyaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/3dUKZe0ZBjX44/giphy.gif" alt="pato triste">
+  </div>
+
+
+  <audio id="audioFlores" src="https://www.myinstants.com/media/sounds/anime-wow-sound-effect.mp3"></audio>
+  <audio id="audioPato" src="https://www.myinstants.com/media/sounds/sad-violin.mp3"></audio>
+
+  <script>
+    function responder(respuesta) {
+      if (respuesta === 'si') {
+        document.getElementById('flores').style.display = 'block';
+        document.getElementById('audioFlores').play();
+      } else {
+        document.getElementById('pato').style.display = 'block';
+        document.getElementById('audioPato').play();
+      }
+    }
+  </script>
+
+</body>
+</html>
